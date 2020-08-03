@@ -11,4 +11,12 @@ public class MommifierTest {
         String expected = mommifier.convert(origin);
         assertEquals(expected, origin);
     }
+
+    @Test
+    void should_return_origin_string_when_vowels_are_greater_than_thirty_percent_but_has_no_continuous_vowels() {
+        Mommifier mommifier = new Mommifier();
+        String origin = "Tis isisisisisisi a tet sing";
+        String expected = mommifier.convert(origin);
+        assertEquals(expected, origin);
+    }
 }
