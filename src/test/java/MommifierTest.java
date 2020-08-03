@@ -19,4 +19,13 @@ public class MommifierTest {
         String expected = mommifier.convert(origin);
         assertEquals(expected, origin);
     }
+
+    @Test
+    void should_return_string_with_inserted_specified_word_when_vowels_are_greater_than_thirsty_percent_and_with_continuous_vowels() {
+        Mommifier mommifier = new Mommifier();
+        String origin = "Tis iiiis aaaa tet sing";
+        String expected = mommifier.convert(origin);
+        assertEquals(expected, "Tis imommyimommyimommyis amommyamommyamommya tet sing");
+    }
+
 }
